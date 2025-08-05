@@ -3,12 +3,14 @@
    
     Python: 3.9.23
    
-    PyTorch: 2.7.1+cu28
+    PyTorch: 2.7.1+cu128
 
 3. Install Libraries using pip
 
       pip install -r requirements.txt
-
+   
+      pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+   
 ---
 PINGS-X
 Training
