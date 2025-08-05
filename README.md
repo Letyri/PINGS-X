@@ -21,6 +21,8 @@ pip install -r requirements.txt
 
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 ```
+## 💾 Datasets download link
+https://drive.google.com/file/d/153C7-ihlLsZ-eggQmJlTzueeFzM7UP7J/view?usp=sharing
 
 ---
 
