@@ -109,23 +109,3 @@ python plot_carotid_PINN_Siren.py \
 ```
 
 ---
-
-## 🧪 Repro Tips
-- **GPU memory**: On a single GPU, reduce `--batch_size` if you hit OOM (e.g., from `10000` down to `2000`).
-- **Path consistency**: Keep `--data_dir`, `--mat_path`, and `--training_path` aligned to your actual dataset locations.
-- **Logging & checkpoints**: Tune `--save_step`, `--dense_step`, `--merge_step` to balance logging granularity and storage (PINGS-X).
-
----
-
-## 📈 Results (placeholder)
-Add your quantitative metrics (e.g., PSNR/SSIM, physical constraint violation rate) and visualizations (flow/velocity fields) here.
-
----
-
-## 📎 Citation (placeholder)
-If you publish with this code, add BibTeX or paper references here.
-
----
-
-## 📄 License (placeholder)
-Specify the license (e.g., MIT, Apache-2.0).
