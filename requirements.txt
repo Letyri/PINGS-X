@@ -55,9 +55,6 @@ shapely==2.0.7
 six==1.17.0
 smmap==5.0.2
 sympy==1.14.0
-torch==2.7.1+cu128
-torchaudio==2.7.1+cu128
-torchvision==0.22.1+cu128
 tqdm==4.67.1
 trimesh==4.7.1
 triton==3.3.1
