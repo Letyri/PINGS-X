@@ -13,6 +13,9 @@
    
 ---
 PINGS-X
+
+      cd ./4D_carotid
+      
 Training
 
     python train_carotid_PINGS_avg.py \
@@ -33,6 +36,9 @@ Evaluation
 
 ---
 PINN
+
+      cd ./4D_carotid
+
 Training
 
     python train_carotid_PINN_avg.py \
@@ -51,6 +57,9 @@ Evaluation
 
 ---
 Siren
+
+      cd ./4D_carotid
+
 Training
 
     python train_carotid_Siren_avg.py \
