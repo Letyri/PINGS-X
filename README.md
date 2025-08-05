@@ -1,12 +1,13 @@
 # PINGS-X
 1. Environment Setup
+   
     Python: 3.9.23
+   
     PyTorch: 2.7.1+cu28
 
-2. Install Libraries using pip
+3. Install Libraries using pip
 
       pip install -r requirements.txt
-
 
 ---
 PINGS-X
@@ -15,7 +16,7 @@ Training
     python train_carotid_PINGS_avg.py \
         --data_dir ./Data/carotid/MRV_2.mat \
         --output_dir ./final_results_PINGS_avg_2 \
-        --epochs 10001 \
+        --epochs 1000 \
         --lr 0.01 \
         --batch_size 10000 \
         --save_step 100 \
@@ -32,17 +33,17 @@ Evaluation
 PINN
 Training
 
-    python train_carotid_PINN_sun_avg.py \
+    python train_carotid_PINN_avg.py \
         --data_dir ./Data/carotid/MRV_2.mat \
-        --model_dir ./Results_carotid_PINN_sun_avg_2 \
+        --model_dir ./Results_carotid_PINN_avg_2 \
         --lr 1e-4 \
         --epochs 100000 \
-        --save_interval 10000
+        
 Evaluation
 
-    python plot_carotid_sun_new.py \
+    python plot_carotid_new.py \
         --model_type PINN \
-        --ckpt_path ./Results_carotid_PINN_sun_avg_2/100000.tar \
+        --ckpt_path ./Results_carotid_PINN_avg_2/100000.tar \
         --mat_path ./Data/carotid/MRV.mat \
         --training_path ./Data/carotid/MRV_2.mat
 
@@ -50,17 +51,17 @@ Evaluation
 Siren
 Training
 
-    python train_carotid_Siren_sun_avg.py \
+    python train_carotid_Siren_avg.py \
         --data_dir ./Data/carotid/MRV_2.mat \
-        --model_dir ./Results_carotid_Siren_sun_avg_2 \
+        --model_dir ./Results_carotid_Siren_avg_2 \
         --lr 5e-6 \
         --epochs 100000 \
-        --save_interval 10000
+        
 Evaluation
 
-    python plot_carotid_sun_new.py \
+    python plot_carotid_new.py \
         --model_type Siren \
-        --ckpt_path ./Results_carotid_Siren_sun_avg_2/100000.tar \
+        --ckpt_path ./Results_carotid_Siren_avg_2/100000.tar \
         --mat_path ./Data/carotid/MRV.mat \
         --training_path ./Data/carotid/MRV_2.mat
 
