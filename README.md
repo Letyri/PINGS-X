@@ -39,7 +39,7 @@ Training
         --data_dir ../Data/carotid/MRV_2.mat \
         --model_dir ./Results_carotid_PINN_avg_2 \
         --lr 1e-4 \
-        --epochs 100000 \
+        --epochs 100000
         
 Evaluation
 
@@ -57,7 +57,7 @@ Training
         --data_dir ../Data/carotid/MRV_2.mat \
         --model_dir ./Results_carotid_Siren_avg_2 \
         --lr 5e-6 \
-        --epochs 100000 \
+        --epochs 100000
         
 Evaluation
 
