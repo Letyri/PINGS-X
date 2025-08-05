@@ -43,7 +43,7 @@ Training
         
 Evaluation
 
-    python plot_carotid_new.py \
+    python plot_carotid_PINN_Siren.py \
         --model_type PINN \
         --ckpt_path ./Results_carotid_PINN_avg_2/100000.tar \
         --mat_path ../Data/carotid/MRV.mat \
@@ -61,7 +61,7 @@ Training
         
 Evaluation
 
-    python plot_carotid_new.py \
+    python plot_carotid_PINN_Siren.py \
         --model_type Siren \
         --ckpt_path ./Results_carotid_Siren_avg_2/100000.tar \
         --mat_path ../Data/carotid/MRV.mat \
