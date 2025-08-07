@@ -111,3 +111,7 @@ python plot_carotid_PINN_Siren.py \
 ```
 
 ---
+
+## 📄 License
+Licensed under the Creative Commons Attribution-NonCommercial 4.0 International Public License. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/.
+
