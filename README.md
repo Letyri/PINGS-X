@@ -49,7 +49,8 @@ cd ./4D_carotid
 ```bash
 python train_carotid_PINGS_avg.py \
   --data_dir ../Data/carotid/MRV_2.mat \
-  --output_dir ./final_results_PINGS_avg_2 \
+  --res 2 \
+  --output_dir ./final_results_PINGS_avg \
   --epochs 1000 \
   --lr 0.01 \
   --batch_size 10000 \
