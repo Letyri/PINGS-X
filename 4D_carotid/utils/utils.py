@@ -10,6 +10,26 @@ from utils import NS_Equation
 
 device = 'cuda'
 
+def make_clusters(edge_tensors):
+    edges = [(edge[0].item(), edge[1].item()) for edge in edge_tensors]
+    G = nx.Graph()
+    G.add_edges_from(edges)
+    connected_components = list(nx.connected_components(G))
+    clusters = [sorted(list(component)) for component in connected_components]
+
+    return clusters
+    
+def compute_cosine_similarity_matrix(data):
+    # 25600 x 1600
+    features = data.T  # 1600 x 25600
+    norms = torch.norm(features, dim=1, keepdim=True)
+    
+    normalized_features = features / norms
+    
+    similarity_matrix = torch.mm(normalized_features, normalized_features.T)
+    
+    return similarity_matrix 
+
 def relative_l2(u, u_gt):
     return torch.norm(u - u_gt) / torch.norm(u_gt)
 
@@ -73,3 +93,4 @@ def train_in_batches_PINN(model,optimizer,x,y,z,t,data_num,train_gt, criterion, 
         
         if epoch % 50 == 0 :
             print(f"Epoch {epoch}, Data Loss: {Data_Loss:.6f}, PDE Loss: {PDE_Loss:.6f}")
+
